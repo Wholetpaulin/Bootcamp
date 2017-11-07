@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Question Game!</title>
+  </head>
+  <body>
+
+    <h1>Question Game!</h1><br>
+    <p id = "score"></p><br>
+    <p id = "question"></p>
+    <h2>Press t for true.  Press f for false.</h2>
+
+    <script>
+      //-------------VARIABLES--------------------------
+      var questions = {
+        q1: ["The sky is blue.", "t"],
+        q2: ["There are 365 days in a year", "t"],
+        q3: ["There are 42 ounces in a pound", "t"],
+        q4: ["The Declaration of Independence was created in 1745.", "t"],
+        q5: ["Bananas are vegtables.", "t"]
+      };
+
+      var score = 0;
+      var index = 0;
+      var qArray = [questions.q1, questions.q2, questions.q3, questions.q4, questions.q5];
+      //---------------Function Definitions--------------  
+
+      function askQuestion(){
+        // If there are still more questions, render the next one.
+        if (index <= (qArray.length - 1)) {
+          document.querySelector("#question").innerHTML = qArray[index][0];
+        }
+        // If there aren't, render the end game screen.
+        else {
+          document.querySelector("#question").innerHTML = "Game Over!";
+          document.querySelector("#score").innerHTML = "Final Score: " + score + " out of " + qArray.length;
+        }
+      }
+
+      function updateScore(){
+        document.querySelector("#score").innerHTML = "Score: " + score;
+      }
+      //---------------MAIN PROCESS----------------------- 
+
+      askQuestion(qArray[index][0]);
+      updateScore(score);
+
+      document.onkeyup = function(event) {            //When a key is pressed..
+
+          if (index === qArray.length) {
+                  return;
+                }
+
+
+          if(event.key === "t" || event.key === "f"){
+
+              if(event.key === qArray[index][1]){       //If the question is answered correctly
+                  alert("Correct!");
+                  score++;
+                  updateScore();
+              }
+              else{
+                alert("Wrong!");
+              }
+              index++;
+              askQuestion();
+          }
+      }
+
+
+    </script>
+    
+  </body>
+</html>

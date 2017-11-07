@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 2
+  </title>
+</head>
+
+<body>
+
+  <div id="game">
+    <div id="user">
+      <!--Here's where it wil say User Guess:  -->
+    </div>
+    <div id="computer">
+      <!--Here's where it will say computer guess: -->
+    </div>
+    <div id="wins">
+      <!--Here's where it will say computer guess: -->
+    </div>
+    <div id="losses">
+      <!--Here's where it will say computer guess: -->
+    </div>
+    <div id="ties">
+      <!--Here's where it will say computer guess: -->
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+
+    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    var computerChoices = ["r", "p", "s"];
+
+    var wins = 0, losses = 0, ties = 0;
+
+    //Write instruction to the screen
+    //Shows everything the screen is going to show from the start.
+    document.getElementById("wins").innerHTML = "Wins: "+ wins;
+    document.getElementById("losses").innerHTML = "Losses: "+ losses;
+    document.getElementById("ties").innerHTML = "Ties: "+ ties;
+
+
+
+
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+      if(event.key === "r" || event.key === "p" || event.key === "s"){
+
+
+        // Determines which key was pressed.
+        var userGuess = event.key;
+
+        // Randomly chooses a choice from the options array. This is the Computer's guess.
+        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+        // Alerts the key the user pressed (userGuess).
+        //Found this example on: https://stackoverflow.com/questions/9689109/how-to-display-javascript-variables-in-a-html-page-without-document-write 
+        document.getElementById("user").innerHTML = "User guess: " + userGuess;
+
+        // Alerts the Computer's guess.
+        document.getElementById("computer").innerHTML = "Computer guess: " + computerGuess;
+
+        //Rock
+        if(userGuess === "r" && computerGuess === "s"){
+            //Increment the win counter
+            wins++;
+            //Print out the new number of wins to screen.
+             document.getElementById("wins").innerHTML = "Wins: " + wins;
+          }
+        if (userGuess === "r" && computerGuess === "p"){
+            //Increment the losses counter
+            losses++;
+            //Print out the new number of wins to screen.
+            document.getElementById("losses").innerHTML = "Losses: "+ losses;
+          }
+
+        //Scissors
+        if(userGuess === "s" && computerGuess === "p"){
+          //Increment the win counter
+            wins++;
+          //Print out the new number of wins to screen.
+            document.getElementById("wins").innerHTML = "Wins: " + wins;
+          }
+        if (userGuess === "s" && computerGuess === "r"){
+          //Increment the losses counter
+          losses++;
+          //Print out the new number of wins to screen.
+          document.getElementById("losses").innerHTML = "Losses: "+ losses;
+          }
+
+        //Paper
+        if(userGuess === "p" && computerGuess === "r"){
+          //Increment the win counter
+            wins++;
+          //Print out the new number of wins to screen.
+            document.getElementById("wins").innerHTML = "Wins: " + wins;
+          }
+        if (userGuess === "p" && computerGuess === "s"){
+          //Increment the losses counter
+          losses++;
+          //Print out the new number of wins to screen.
+          document.getElementById("losses").innerHTML = "Losses: "+ losses;
+          }
+
+        //Tie
+        if(userGuess === computerGuess){
+           //Increment the ties counter
+          ties++;
+          //Print out the new number of wins to screen.
+          document.getElementById("ties").innerHTML = "Ties: "+ ties;
+        }
+
+      }else{
+          //print out please type r, p, or s
+      }
+
+    };
+  </script>
+
+</body>
+
+</html>

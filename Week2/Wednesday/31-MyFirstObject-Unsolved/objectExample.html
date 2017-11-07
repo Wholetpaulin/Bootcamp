@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Object</title>
+  </head>
+  <body>
+    <h1>Car Adventures!</h1>
+    <h2>Type "h" to honk, "d" to drive to work, "w" to drive around the world, or "t" to get a tuneup.</h2>
+    <script>
+
+      var dog = {
+        breed: "Honda",
+        age: 3,
+        color: "brown",
+
+        bark: function() {
+          alert("bark, bark, bark!");
+        },
+
+        ageTheDog: function() {
+          var dogAge = this.age * 7;
+        }
+
+        ageOneYear: function() {
+
+          alert("One year later...");
+
+          this.age = this.age + 1;    //Age the dog 1 year
+          dog.ageTheDog();
+
+          alert("New age: " + this.age);
+          alert("New age in dog years: " + this.dogAge);  //Why isn't this recoginized as a number?
+
+        },
+
+
+        rollOver: function() {
+          alert("*Dog rolls over.");
+        }
+      };
+
+
+      // How would we log...
+
+      // The car's make?
+      console.log(dog.age);
+
+      // How would we run the car's driveToWork function?
+      dog.bark();
+
+      dog.ageTheDog();
+
+      // How would we run the getTuneUp function?
+      dog.rollOver();
+
+    </script>
+    
+  </body>
+</html>

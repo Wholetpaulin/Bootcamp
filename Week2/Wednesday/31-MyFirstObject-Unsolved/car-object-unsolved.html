@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Object</title>
+  </head>
+  <body>
+
+    <h1>Car Adventures!</h1><br>
+    <h2>Type "h" to honk, "d" to drive to work, "w" to drive around the world, or "t" to get a tuneup.</h2><br>
+    <h2>See console for car stats.</h2>
+
+    <script>
+
+      var car = {
+        make: "Honda",
+        model: "Fit",
+        color: "Blue Raspberry",
+        mileage: 3000,
+        isWorking: true,
+
+      //---------------Function Definitions--------------  
+        driveToWork: function() {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 8;
+
+          alert("New mileage: " + this.mileage);
+        },
+
+        driveAroundWorld: function() {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 24000;
+
+          alert("New Mileage: " + this.mileage);
+          alert("Car needs a tuneup!");
+
+          this.isWorking = false;
+        },
+
+        getTuneUp: function() {
+          alert("Car is ready to go!");
+          this.isWorking = true;
+        },
+
+        honk: function() {
+          alert("Honk! Honk!");
+        }
+      };
+
+//-------------------CONSOLE LOG STUFF------------          
+
+          // Log the car's make?
+          console.log("Make:" + car.make);
+
+          // Log the car's model?
+          console.log("Model:" + car.model);
+
+          // Log the car's color?
+          console.log("Color:" + car.model);
+
+          // Log the car;s mileage
+          console.log("Mileage:" + car.mileage);
+
+          // Log the if the car's working?
+          console.log("Is working:" + car.isWorking);
+
+
+//----------------Listen for a keypress---------------------
+      document.onkeyup = function(event) {
+
+          switch(event.key){
+
+            // Press "h" to honk
+            case "h": 
+              car.honk();
+              break;
+
+            // Press "d" to drive
+            case "d": 
+              car.driveToWork();
+              break;
+
+            // Press "w" to drive around the world
+            case "w": 
+              car.driveAroundWorld();
+              break;
+
+            // Press "t" for tuneup
+            case "t": 
+              car.getTuneUp();
+              break;
+
+            default: 
+              alert("Press one of the correct keys, dingus!");
+              break;
+
+          }
+      }
+    </script>
+    
+  </body>
+</html>

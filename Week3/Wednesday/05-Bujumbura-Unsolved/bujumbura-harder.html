@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bujumbura Data</title>
+</head>
+
+<body>
+  <!-- Retrieved data will be dumped here -->
+  <div class="city"></div>
+  <div class="wind"></div>
+  <div class="humidity"></div>
+  <div class="temp"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // Things to accomplish:
+    // Get an API Key from OpenWeatherMap API
+    // Create an AJAX call to retrieve data Log the data in console
+    var queryURL = "https:api.openweathermap.org/data/2.5/weather?q=London&APPID=00bc66aa1b306a77373271e9f6beecf8";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).done(
+
+
+
+
+    function(response) {
+      //var response = 
+      console.log(response);
+      $(".city").html("London");
+      $(".wind").html(response.wind.speed);
+      
+
+
+
+
+
+      $(".humidity").html(response.main.humidity);
+      $(".temp").html(response.main.temp);
+      console.log("London");
+      console.log(response.wind.speed);
+      console.log(response.main.humidity);
+     console.log(response.main.temp);
+      //$().html = "";// Log the data in HTML
+      //API key: 00bc66aa1b306a77373271e9f6beecf8
+
+    });
+    
+    // Scream Ushindi (victory in Swahili)! at the top of your lungs
+  </script>
+
+</body>
+
+</html>

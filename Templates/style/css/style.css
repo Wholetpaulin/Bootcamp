@@ -1,0 +1,314 @@
+*{
+	box-sizing: border-box;
+	margin: 0 auto;
+	text-align: left;
+	font-family: 'Roboto Slab', serif;
+	background-color: /*make this the spotted pic*/;
+	color: #777777;
+}
+
+body{
+	background: url('http://static.tumblr.com/ge74hdk/G3flw5yrs/wood_pattern.png');
+	font-family: 'Roboto Slab', serif;
+}
+
+header{
+	color: white;
+	background-color: #ffffff;
+	border-bottom: 1px solid gray;
+	display: inline-block;	/*This single line fixed my entire site*/
+	width: 100%;
+	padding: 0 0 0 30px;
+}
+
+p{
+	line-height: 1.5;
+	font-family:'Georgia', Times, Times New Roman, serif;;
+
+}
+
+a{
+	text-decoration: none;
+}
+
+table{
+	width:100%;
+	font-family:'Georgia', Times, Times New Roman, serif;;
+
+}
+
+footer{
+	color: #111111;
+	background-color:#666666;
+	text-align: center;
+	font-family:'Georgia', Times, Times New Roman, serif;;
+	border-top: 3px solid #4aaaa5;
+	width: 100%;
+	padding: 15px 100px 15px 100px;
+	float: left;
+	position: fixed;
+	bottom: 0%;
+	left: 0%;
+}
+
+.connect
+{
+	padding: 20px;
+	float: right;
+	margin: 30px 30px 30px 0;
+	width: 25%;
+	background: white;
+}
+
+.icon
+{
+	width: 60px;
+}
+
+.overflow
+{
+	width: 55px;
+	position: relative;
+	left: 4px;
+	bottom: 2px;
+
+}
+
+.aboutMe
+{
+	margin: 30px 0px 70px 30px;
+	padding: 20px;
+	float: left;
+	width: 66%;
+	background:white;
+}
+
+.projects{
+	width: 100%;
+
+}
+
+.thumb{
+	width:100%;
+}
+
+.snip{
+	width: 25%;
+	margin: 5px;
+	float:left;
+
+}
+
+#yourName
+{
+	color: #eee;
+	background-color: #4aaaa5;	/*teal*/
+	font-size: 20px;
+	font-weight: 700;
+	padding: 15px;
+	text-align: center;
+	float: left;
+}
+
+#topLinks
+{
+	float: right;
+	padding: 15px;
+	margin-right: 20px;
+}
+
+#about
+{
+	color: #4aaaa5;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+	float: left;
+}
+
+#bio-image
+{
+	width:150px;
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+#connectWithMe
+{
+	color: #4aaaa5;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+#desc
+{
+	color: #aaa;
+	font-size: 14px;
+	
+}
+
+#tech
+{
+	color: #aaa;
+	font-size: 10px;
+}
+
+#foot
+{
+	color: white;
+	text-align: center;
+}
+
+
+
+
+/* stuff added for contact page*/
+/*-----------------------------*/
+
+form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 400px;
+  /* To see the outline of the form */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* To make sure that all labels have the same size and are properly aligned */
+  display: inline-block;
+  width: 90px;
+  text-align: left;
+}
+
+input, textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* To give the same size to all text fields */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* To give a little highlight on active elements */
+  border-color: #000;
+}
+
+textarea {
+  /* To properly align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* To give enough room to type some text */
+  height: 5em;
+}
+
+.button {
+  /* To position the buttons to the same position of the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: .5em;
+}
+/*This size is for Laptops*/
+@media screen and (max-width: 980px) {
+  /* The body's bg color will be #333 */
+  body {
+    
+  }
+
+  .aboutMe
+{
+	margin: 30px 0px 35px 30px;
+	padding: 20px;
+	float: left;
+	width: 93%;
+	background:white;
+}
+  .connect
+{
+	padding: 20px;
+	float: left;
+	margin: 0 30px 90px 30px;
+	width: 93%;
+	background: white;
+
+}
+
+  
+}
+/*This size is for tablets*/
+@media screen and (max-width: 768px) {
+  /* The body's bg color will be #333 */
+  body {
+    
+  }
+  
+  .aboutMe
+{
+	margin: 30px 0px 35px 30px;
+	padding: 20px;
+	float: left;
+	width: 92%;
+	background:white;
+}
+  .connect
+{
+	padding: 20px;
+	float: left;
+	margin: 0 30px 90px 30px;
+	width: 92%;
+	background: white;
+
+}
+}
+/*This size is for phones in landscape*/
+@media screen and (max-width: 620px) {
+  /* The body's bg color will be #333 */
+  body {
+    
+  }
+
+.aboutMe
+{
+	margin: 30px 0px 35px 30px;
+	padding: 20px;
+	float: left;
+	width: 87%;
+	background:white;
+}
+  .connect
+{
+	padding: 20px;
+	float: left;
+	margin: 0 30px 90px 30px;
+	width: 87%;
+	background: white;
+
+}
+
+#yourName
+{
+	width:87%;
+}
+
+#topLinks
+{
+	float: left;
+	padding: 15px 15px 15px 0;
+	margin-right: 30px;
+}
+
+}
